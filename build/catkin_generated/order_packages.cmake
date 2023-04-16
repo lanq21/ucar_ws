@@ -24,7 +24,11 @@ list(APPEND CATKIN_ORDERED_PACKAGES "gazebo_nav")
 list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "gazebo_nav")
 list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
 list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
+list(APPEND CATKIN_ORDERED_PACKAGES "simple_navigation_goals")
+list(APPEND CATKIN_ORDERED_PACKAGE_PATHS "simple_navigation_goals")
+list(APPEND CATKIN_ORDERED_PACKAGES_IS_META "False")
+list(APPEND CATKIN_ORDERED_PACKAGES_BUILD_TYPE "catkin")
 
 set(CATKIN_MESSAGE_GENERATORS )
 
-set(CATKIN_METAPACKAGE_CMAKE_TEMPLATE "/usr/lib/python2.7/dist-packages/catkin_pkg/templates/metapackage.cmake.in")
+set(CATKIN_METAPACKAGE_CMAKE_TEMPLATE "/home/lq/.local/lib/python2.7/site-packages/catkin_pkg/templates/metapackage.cmake.in")

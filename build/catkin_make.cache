@@ -1,2 +1,2 @@
-gazebo_map_cartographer:gazebo_map_gmapping:gazebo_nav:gazebo_race:gazebo_train
+gazebo_map_cartographer:gazebo_map_gmapping:gazebo_nav:gazebo_race:gazebo_train:simple_navigation_goals
 -DCATKIN_DEVEL_PREFIX=/home/lq/ucar_ws/devel -DCMAKE_INSTALL_PREFIX=/home/lq/ucar_ws/install -G Unix Makefiles

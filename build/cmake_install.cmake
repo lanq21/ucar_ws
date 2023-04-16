@@ -136,6 +136,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/lq/ucar_ws/build/gazebo_map_cartographer/cmake_install.cmake")
   include("/home/lq/ucar_ws/build/gazebo_map_gmapping/cmake_install.cmake")
   include("/home/lq/ucar_ws/build/gazebo_nav/cmake_install.cmake")
+  include("/home/lq/ucar_ws/build/simple_navigation_goals/cmake_install.cmake")
 
 endif()
 
