@@ -9,6 +9,7 @@ typedef actionlib::SimpleActionClient<move_base_msgs::MoveBaseAction> MoveBaseCl
 int main(int argc, char **argv)
 {
     // 初始化节点
+    ROS_INFO("init node");
     ros::init(argc, argv, "simple_navigation_goals");
 
     if (argc < 3) // 参数不足
@@ -21,11 +22,14 @@ int main(int argc, char **argv)
     }
 
     // 建立通信
+    ROS_INFO("set communication");
     MoveBaseClient ac("move_base", true);
 
     // 等待响应
+    ROS_INFO("wait for response");
     while (!ac.waitForServer(ros::Duration(5.0)))
         ROS_INFO("waiting for the move_base action server to come up");
+    ROS_INFO("response received");
 
     // 创建 goal 类对象
     move_base_msgs::MoveBaseGoal goal;
@@ -40,11 +44,9 @@ int main(int argc, char **argv)
     goal.target_pose.pose.position.z = 0;
 
     // 设置目标指向
-    double half_theta;
+    double half_theta = 0;
     if (argc == 4)
         half_theta = atof(argv[3]) / 180.0 * PI / 2.0; // 角度转换为弧度，并减半
-    else
-        half_theta = 0;
     goal.target_pose.pose.orientation.w = cos(half_theta);
     goal.target_pose.pose.orientation.x = 0;
     goal.target_pose.pose.orientation.y = 0;
@@ -56,7 +58,7 @@ int main(int argc, char **argv)
     ac.sendGoal(goal);
 
     // 等待反馈结果
-    ac.waitForResult();
+    // ac.waitForResult();
 
     return 0;
 }
