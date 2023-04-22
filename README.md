@@ -42,11 +42,16 @@ catkin_make
 ~/ucar_ws/src/gazebo_nav/launch/config/move_base/dwa_local_planner_params.yaml
 ```
 
+文档链接 [dwa_params](
+~/ucar_ws/src/gazebo_nav/launch/config/move_base/dwa_local_planner_params.yaml
+)
+
 ```sh
 # 发送终点坐标
 rosrun simple_navigation_goals simple_navigation_goals
 # 终点大概位置参数 0 -5 180
 # 测试用位置参数 5 0 0
+
 # 从 rviz 获取终点坐标
 # 打开 rviz ，用粉色箭头(2DNavGoal)点击地图
 rostopic echo /move_base_simple/goal
