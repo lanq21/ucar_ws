@@ -42,9 +42,7 @@ catkin_make
 ~/ucar_ws/src/gazebo_nav/launch/config/move_base/dwa_local_planner_params.yaml
 ```
 
-文档链接 [dwa_params](
-~/ucar_ws/src/gazebo_nav/launch/config/move_base/dwa_local_planner_params.yaml
-)
+文档链接 [dwa_params](/src/gazebo_nav/launch/config/move_base/dwa_local_planner_params.yaml)
 
 ```sh
 # 发送终点坐标
